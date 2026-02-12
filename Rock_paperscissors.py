@@ -4,7 +4,7 @@ i =0
 j =0
 while True :
  randomgame =random.randint(1,3)
- user=input("input rock paper scissors!; ")
+ user=input("input rock paper scissors!; ").lower()
 
 
  if randomgame == 1 and user == "scissors":
@@ -30,8 +30,10 @@ while True :
  elif randomgame == 3 and user == "paper":
     print("computer: scissors, you input paper so you lsoe")
     j +=1
+ elif randomgame == 3 and user == "scissors":
+    print("computer: scissors, you input paper so you draw")
  else:
-    print("computer: scissors, you input scissors so you draw")
+    print("wrong input")
  if i ==2:
    print("you success fully win")
    break
